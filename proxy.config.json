@@ -1,0 +1,8 @@
+{
+  "/exchange": {
+    "target": "https://bank.gov.ua/NBU_Exchange",
+    "secure": true,
+    "changeOrigin": true,
+    "protocol": "https:"
+  }
+}

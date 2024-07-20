@@ -1,0 +1,20 @@
+<app-header [currencies]="currencies"></app-header>
+<form class="exchange" [formGroup]="currenciesForm" *ngIf="currencies.length">
+  <div class="exchange__from">
+    <select formControlName="fromCurrency" (change)="calculateExchangeTotal('fromTotal','toTotal')">
+      <option [value]="currency" *ngFor="let currency of selectCurrencies">{{ currency }}</option>
+    </select>
+    <input formControlName="fromTotal" type="number"
+           (input)="calculateExchangeTotal('fromTotal','toTotal')">
+  </div>
+  <div class="exchange__replace">
+    <button class="exchange__replace--btn" (click)="replaceCurrencies()">⮂</button>
+  </div>
+  <div class="exchange__to">
+    <select formControlName="toCurrency" (change)="calculateExchangeTotal('toTotal' , 'fromTotal')">
+      <option [value]="currency" *ngFor="let currency of selectCurrencies | currencies: isCurrenciesFiltered">{{ currency }}</option>
+    </select>
+    <input formControlName="toTotal" type="number"
+           (input)="calculateExchangeTotal('toTotal' , 'fromTotal')">
+  </div>
+</form>

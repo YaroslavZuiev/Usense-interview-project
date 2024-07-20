@@ -1,0 +1,12 @@
+.exchange {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+
+  &__replace {
+    &--btn {
+      width: 64px;
+      margin: 0 8px;
+    }
+  }
+}

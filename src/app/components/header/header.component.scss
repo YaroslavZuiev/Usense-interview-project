@@ -1,0 +1,23 @@
+.header {
+  height: 64px;
+  background: #000;
+  box-shadow: 5px 5px 5px;
+  display: flex;
+  justify-content: center;
+
+  &__currencies {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px;
+    border: 1px solid lightblue;
+    box-shadow: 2px 2px 2px lightblue;
+    width: 200px;
+    border-radius: 12px;
+
+    &--text {
+      color: #fff;
+    }
+  }
+}
